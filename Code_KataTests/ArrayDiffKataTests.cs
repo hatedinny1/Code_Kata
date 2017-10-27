@@ -42,6 +42,13 @@ namespace Code_Kata.Tests
             ActualAreEqualExpected(arrayDiffInitial);
         }
 
+        [TestMethod()]
+        public void Input_Int_Array_1_2_2_Substract_Int_Array_2_Should_Be_Int_Array_1()
+        {
+            var arrayDiffInitial = new ArrayDiffInitial(new[] { 1, 2, 2 }, new[] { 2 }, new[] { 1});
+            ActualAreEqualExpected(arrayDiffInitial);
+        }
+
         private static void ActualAreEqualExpected(ArrayDiffInitial arrayDiffInitial)
         {
             var actual = arrayDiffInitial.Kata.ArrayDiff(arrayDiffInitial.Input, arrayDiffInitial.Substract);
