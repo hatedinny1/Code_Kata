@@ -45,7 +45,14 @@ namespace Code_Kata.Tests
         [TestMethod()]
         public void Input_Int_Array_1_2_2_Substract_Int_Array_2_Should_Be_Int_Array_1()
         {
-            var arrayDiffInitial = new ArrayDiffInitial(new[] { 1, 2, 2 }, new[] { 2 }, new[] { 1});
+            var arrayDiffInitial = new ArrayDiffInitial(new[] { 1, 2, 2 }, new[] { 2 }, new[] { 1 });
+            ActualAreEqualExpected(arrayDiffInitial);
+        }
+
+        [TestMethod()]
+        public void Input_Int_Array_1_2_2_Substract_Int_Array_1_2_2_Should_Be_Int_Array_Empty()
+        {
+            var arrayDiffInitial = new ArrayDiffInitial(new[] { 1, 2, 2 }, new[] { 1, 2, 2 }, new int[] { });
             ActualAreEqualExpected(arrayDiffInitial);
         }
 
