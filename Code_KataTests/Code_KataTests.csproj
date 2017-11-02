@@ -65,6 +65,7 @@
   </Choose>
   <ItemGroup>
     <Compile Include="ArrayDiffKataTests.cs" />
+    <Compile Include="PrimeDecompKataTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
