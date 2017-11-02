@@ -8,13 +8,25 @@ namespace Code_Kata
 {
     public class PrimeDecompKata
     {
-        public string Factors(int lst)
+        public String Factors(int lst)
         {
             if (lst < 1)
             {
                 throw new ArgumentOutOfRangeException();
             }
-            return "";
+            var result = string.Empty;
+            while (lst > 1)
+            {
+                for (int i = 2; i <= lst; i++)
+                {
+                    if (lst % 2 == 0)
+                    {
+                        lst = lst / i;
+                        result = $"({i})";
+                    }
+                }
+            }
+            return result;
         }
     }
 }

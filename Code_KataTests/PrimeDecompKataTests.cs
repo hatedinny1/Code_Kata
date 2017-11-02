@@ -20,5 +20,18 @@ namespace Code_Kata.Tests
             //act
             var actual = sut.Factors(-1);
         }
+
+        [TestMethod()]
+        public void Input_2_should_be_2()
+        {
+            //arrange
+            var input = 2;
+            var expected = "(2)";
+            var sut = new PrimeDecompKata();
+            //act
+            var actual = sut.Factors(input);
+            //assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
