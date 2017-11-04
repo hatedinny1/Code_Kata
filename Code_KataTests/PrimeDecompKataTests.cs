@@ -28,7 +28,21 @@ namespace Code_Kata.Tests
             var input = 2;
             var expected = "(2)";
             var sut = new PrimeDecompKata();
-            //act
+            AssertAreEqual(sut, input, expected);
+        }
+
+        [TestMethod()]
+        public void Input_4_should_be_2xx2()
+        {
+            //arrange
+            var input = 4;
+            var expected = "(2**2)";
+            var sut = new PrimeDecompKata();
+            AssertAreEqual(sut, input, expected);
+        }
+
+        private static void AssertAreEqual(PrimeDecompKata sut, int input, string expected)
+        {
             var actual = sut.Factors(input);
             //assert
             Assert.AreEqual(expected, actual);

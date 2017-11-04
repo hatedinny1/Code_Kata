@@ -15,6 +15,7 @@ namespace Code_Kata
                 throw new ArgumentOutOfRangeException();
             }
             var result = string.Empty;
+            var counter = new Dictionary<string, int>();
             while (lst > 1)
             {
                 for (int i = 2; i <= lst; i++)
@@ -22,11 +23,25 @@ namespace Code_Kata
                     if (lst % 2 == 0)
                     {
                         lst = lst / i;
-                        result = $"({i})";
+                        var key = i.ToString();
+                        if (!counter.ContainsKey(key))
+                        {
+                            counter[key] = 1;
+                        }
+                        else
+                        {
+                            counter[key]++;
+                        }
                     }
                 }
             }
-            return result;
+
+            return counter
+                   .Aggregate(result, (current, c) =>
+                   current + 
+                   (c.Value > 1 ?
+                   $"({c.Key}**{c.Value})" :
+                   $"({c.Key})"));
         }
     }
 }
