@@ -20,7 +20,7 @@ namespace Code_Kata
             {
                 for (int i = 2; i <= lst; i++)
                 {
-                    if (lst % 2 == 0)
+                    if (lst % i == 0)
                     {
                         lst = lst / i;
                         var key = i.ToString();
@@ -32,6 +32,7 @@ namespace Code_Kata
                         {
                             counter[key]++;
                         }
+                        break;
                     }
                 }
             }
